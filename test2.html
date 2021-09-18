@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/">
+    <title>Document</title>
+    <Style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    image-rendering: -moz-crisp-edges;         
+image-rendering:   -o-crisp-edges;        
+image-rendering: -webkit-optimize-contrast;
+image-rendering: crisp-edges;
+-ms-interpolation-mode: nearest-neighbor;
+}
+
+body {
+	background-color: black;
+	color: white;
+	min-height: 100vh;
+}
+
+.home-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.mypic {
+    border-radius: 50%;
+    height: 350px;
+    width: 350px;
+    object-fit: contain  ;
+ 
+    
+}
+
+.home-content2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.home-content2 h1 {
+    
+}
+
+.iam-wrapper {
+	display: flex;
+}
+
+.iam-wrapper .iam {
+	font-size: 60px;
+	font-weight: 400;
+}
+
+.iam-wrapper .run-text {
+	margin-left: 15px;
+	height: 90px;
+	line-height: 90px;
+	overflow: hidden;
+}
+
+.run-text li {
+	list-style: none;
+	color: cyan;
+	font-size: 60px;
+	font-weight: 400;
+	position: relative;
+	top: 0;
+	animation: slide 8s steps(4) infinite;
+}
+
+@keyframes slide {
+	100% {
+		top: -360px;
+	}
+}
+
+.run-text li span {
+	position: relative;
+	margin: 5px 0;
+	line-height: 90px;
+}
+
+.run-text li span::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: black;
+	border-left: 3px left cyan;
+	animation: typing 3s steps(12) infinite;
+}
+
+@keyframes typing {
+	40%,
+	60% {
+		left: calc(100% + 30px);
+	}
+	100% {
+		left: 0;
+	}
+}
+    </Style>
+</head>
+<body>
+    <section class="home"> 
+        <div class="container">
+            <div class="row">
+                <div class="home-content">
+                    <img src="images/me.jpg" alt="my pic" class="mypic">
+                </div>
+                <div class="home-content2">
+                    <h1>Hi my name is afdafasfsdf</h1>
+                </div>
+                <div class="iam-wrapper">
+                    <div class="iam">I am </div>
+                    <ul class="run-text">
+                        <li><span>a Developer</span></li>
+                        <li><span>a Marketer</span></li>
+                        <li><span>Looking for a job</span></li>
+                        <li><span>a Freelancer</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
